@@ -1,0 +1,105 @@
+{% extends "./layout.njk" %}
+
+    {% block css %}
+        <link rel="stylesheet" href="/stylesheets/form.css">
+    {% endblock %}
+
+    {% block content %}
+
+        <div class="form-container">
+
+            <form action={{ "/student/" + id + "?_method=PUT" }} method="post">
+
+                <h1>Editar estudante</h1>
+
+                <div class="field" id="id_oculto">
+                    <label for="id">id</label>
+                    <input 
+                        type="text" 
+                        id="id" 
+                        name="id"
+                        value={{id}}
+                    />
+                </div>
+
+                <div class="field">
+                    <label for="img_url">Avatar url</label>
+                    <input 
+                        type="text" 
+                        id="img_url" 
+                        name="img_url"
+                        value={{img_url}}
+                    />
+                </div>
+
+                <div class="field">
+                    <label for="nome">Nome completo</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome"
+                        value="{{nome}}"
+                    />
+                </div>
+
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        value="{{email}}"
+                    />
+                </div>
+
+                <div class="field">
+                    <label for="nasc">Data de nascimento</label>
+                    <input 
+                        type="date" 
+                        id="nasc" 
+                        name="nasc" 
+                        value={{nasc}}
+                    />
+                </div>
+
+                <div class="field">
+                    <label for="escolaridade">Ano escolar</label>
+                    <select name="escolaridade" id="escolaridade">
+                        <option value="0">Selecione o ano escolar</option>
+                        <option value="1" {% if escolaridade == 1 %} selected="selected" {% endif %} >5º ano do ensino fundamental</option>
+                        <option value="2" {% if escolaridade == 2 %} selected="selected" {% endif %} >6º ano do ensino fundamental</option>
+                        <option value="3" {% if escolaridade == 3 %} selected="selected" {% endif %} >7º ano do ensino fundamental</option>
+                        <option value="4" {% if escolaridade == 4 %} selected="selected" {% endif %} >8º ano do ensino fundamental</option>
+                        <option value="5" {% if escolaridade == 5 %} selected="selected" {% endif %} >9º ano do ensino fundamental</option>
+                        <option value="6" {% if escolaridade == 6 %} selected="selected" {% endif %} >1º ano do ensino médio</option>
+                        <option value="7" {% if escolaridade == 7 %} selected="selected" {% endif %} >2º ano do ensino médio</option>
+                        <option value="8" {% if escolaridade == 8 %} selected="selected" {% endif %} >3º ano do ensino médio</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="carga">Carga horária semanal</label>
+                    <input 
+                        type="number" 
+                        id="carga" 
+                        name="carga" 
+                        value={{carga}}
+                    />
+                </div>
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+            </form>
+
+        </div>
+
+
+    </body>
+    </html>
+    
+    
+    {% endblock %}
+
+
+    

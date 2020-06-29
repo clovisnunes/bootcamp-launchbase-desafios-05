@@ -1,0 +1,49 @@
+{% extends "./layout.njk" %}
+
+    {% block css %}
+        <link rel="stylesheet" href="/stylesheets/card.css">
+    {% endblock %}
+
+    {% block content %}
+
+        <div class="card">
+            <div class="container">
+                <img src={{img_url}} alt="professor" />
+                <div class="bottom-right">
+                    <a href={{ "/professor/editar/" + id }}>&#128393;</a>
+                    <form method="POST" action={{"/professor/" + id +  "?_method=DELETE"}}>
+                        <button class="del-button" type="submit">&#10060;</button>
+                    </form>
+                </div>
+            </div>
+            
+            <h1>{{nome}} - {{idade}}</h1>
+            <ul>
+                {% for disc in acompanhamento %}
+                    <li>&#128213; {{disc}}</li>
+                {% endfor %}
+            </ul>
+            <div class="bott">
+                <div class="bott-item">
+                    {{tipo}}
+                </div>
+
+                <div class="bott-item center-item">
+                    Desde: <br>{{dateCriacaoForm}}
+                </div>
+
+                <div class="bott-item">
+                    {{graduacao}}
+                </div>
+            </div>
+        </div>
+
+        <script src="/javascripts/confirm-del.js"></script>
+    </body>
+    </html>
+    
+    
+    {% endblock %}
+
+
+    

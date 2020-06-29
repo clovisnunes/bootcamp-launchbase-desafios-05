@@ -1,0 +1,25 @@
+{% block base %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04 - Controle de academia</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <header class="main-header">
+        <ul>
+            <li><a href="/professor">Teachers</a></li>
+            <li><a href="/student">Students</a></li>
+        </ul>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
+
+{% endblock %}

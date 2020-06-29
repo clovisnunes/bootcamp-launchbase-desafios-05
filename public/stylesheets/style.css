@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  color: #111;
+}
+
+.main-header {
+  height: 65px;
+  width: 100%;
+  background: #f05373;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header ul li {
+  display: inline-block;
+  margin-right: 100px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
