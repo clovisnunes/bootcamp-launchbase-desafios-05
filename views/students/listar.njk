@@ -13,10 +13,9 @@
                     <h3>Cadastrar</h3>
                 </div>
             </a>
-            <div>
+            <div class="descricao-card">
                 <p>Cadastrar novo estudante.</p>
             </div>
-            
             
     </div>
 
@@ -36,7 +35,7 @@
             </div>
             
             <div class="actions">
-                <a href={{ "/student/editar/" + professor.id }}>&#128393;</a>
+                <a href={{ "/student/editar/" + professor.id }}>&#9998;</a>
                 <form method="POST" action={{"/student/" + professor.id +  "?_method=DELETE"}}>
                     <button class="del-button" type="submit">&#10060;</button>
                 </form>
