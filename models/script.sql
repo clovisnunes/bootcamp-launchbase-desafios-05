@@ -1,5 +1,5 @@
-CREATE TABLE TEST(
-    ID INT PRIMARY KEY,
+CREATE TABLE my_teacher(
+    ID serial PRIMARY KEY,
     avatar_url TEXT NOT NULL,
     name TEXT NOT NULL,
     birth_date TIMESTAMP NOT NULL,
